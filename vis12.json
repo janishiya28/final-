@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "width": 700,
+    "height": 450,
+  
+    "title": "Player Contribution",
+  
+    "data": {
+      "url": "aus_batting.csv"
+    },
+  
+    "mark": "rect",
+  
+    "encoding": {
+  
+      "x": {
+        "field": "Player",
+        "type": "nominal"
+      },
+  
+      "y": {
+        "field": "Runs",
+        "type": "quantitative"
+      },
+  
+      "color": {
+        "field": "Runs",
+        "type": "quantitative",
+        "scale": {
+          "scheme": "greens"
+        }
+      },
+  
+      "tooltip": [
+        { "field": "Player" },
+        { "field": "Runs" }
+      ]
+    },
+  
+    "config": {
+      "background": "white"
+    }
+  }

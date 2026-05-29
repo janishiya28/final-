@@ -1,0 +1,111 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 620,
+  "height": 420,
+
+  "title": {
+    "text": "Where Australian Batters ",
+    "font": "Georgia",
+    "fontSize": 24,
+    "color": "#0b6623",
+    "anchor": "middle"
+  },
+
+  "data": {
+    "url": "aus_batting.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.Runs)",
+      "as": "RunsNum"
+    },
+    {
+      "calculate": "toNumber(datum.Average)",
+      "as": "AverageNum"
+    }
+  ],
+
+  "mark": {
+    "type": "rect",
+    "cornerRadius": 3
+  },
+
+  "encoding": {
+
+    "x": {
+      "bin": {
+        "maxbins": 12
+      },
+
+      "field": "RunsNum",
+      "type": "quantitative",
+
+      "title": "Career Runs",
+
+      "axis": {
+        "titleColor": "#0b6623",
+        "labelColor": "#064d1a",
+        "grid": false,
+        "tickColor": "#0b6623"
+      }
+    },
+
+    "y": {
+      "bin": {
+        "maxbins": 10
+      },
+
+      "field": "AverageNum",
+      "type": "quantitative",
+
+      "title": "Batting Average",
+
+      "axis": {
+        "titleColor": "#0b6623",
+        "labelColor": "#064d1a",
+        "grid": false,
+        "tickColor": "#0b6623"
+      }
+    },
+
+    "color": {
+      "aggregate": "count",
+      "type": "quantitative",
+
+      "title": "Players",
+
+      "scale": {
+        "range": [
+          "#d8f3dc",
+          "#95d5b2",
+          "#52b788",
+          "#2d6a4f",
+          "#0b6623"
+        ]
+      },
+
+      "legend": {
+        "titleColor": "#0b6623",
+        "labelColor": "#064d1a"
+      }
+    },
+
+    "tooltip": [
+      {
+        "aggregate": "count",
+        "title": "Players"
+      }
+    ]
+  },
+
+  "config": {
+
+    "background": "#ffffff",
+
+    "view": {
+      "stroke": null
+    }
+  }
+}

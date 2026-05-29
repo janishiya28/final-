@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 800,
+  "height": 500,
+
+  "title": "Matches by Australian State",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+
+    "format": {
+      "property": "features",
+      "type": "json"
+    }
+  },
+
+  "transform": [
+
+    {
+      "lookup": "properties.STATE_NAME",
+
+      "from": {
+        "data": {
+          "url": "state_matches.csv"
+        },
+
+        "key": "State",
+
+        "fields": ["Matches"]
+      }
+    }
+  ],
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white"
+  },
+
+  "encoding": {
+
+    "color": {
+      "field": "Matches",
+      "type": "quantitative",
+
+      "scale": {
+        "range": [
+          "#fff7d6",
+          "#ffd966",
+          "#f4c542",
+          "#0b6623"
+        ]
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "properties.STATE_NAME",
+        "title": "State"
+      },
+
+      {
+        "field": "Matches",
+        "title": "Matches"
+      }
+    ]
+  },
+
+  "config": {
+    "background": "#ffffff"
+  }
+}

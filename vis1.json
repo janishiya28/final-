@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 700,
+  "height": 400,
+
+  "title": "Australian Test Wins Over Time",
+
+  "data": {
+    "url": "aus_team_results.csv"
+  },
+
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 80
+    },
+    "color": "#0b6623",
+    "strokeWidth": 3
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+
+    "y": {
+      "field": "Wins",
+      "type": "quantitative",
+      "title": "Wins"
+    },
+
+    "tooltip": [
+      {
+        "field": "Year"
+      },
+      {
+        "field": "Wins"
+      }
+    ]
+  },
+
+  "config": {
+    "background": "#ffffff",
+
+    "view": {
+      "stroke": "transparent"
+    },
+
+    "axis": {
+      "labelColor": "#064d1a",
+      "titleColor": "#0b6623",
+      "gridColor": "#f0e6c2"
+    },
+
+    "title": {
+      "color": "#0b6623"
+    }
+  }
+}

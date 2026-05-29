@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "width": 700,
+    "height": 450,
+  
+    "title": "Matches by Format",
+  
+    "data": {
+      "url": "aus_matches_type.csv"
+    },
+  
+    "mark": "bar",
+  
+    "encoding": {
+  
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+  
+      "y": {
+        "field": "Matches",
+        "type": "quantitative",
+        "title": "Matches"
+      },
+  
+      "color": {
+      "field": "Format",
+      "type": "nominal",
+      "title": "Match Format",
+
+      "scale": {
+        "range": [
+          "#d4b000",
+          "#a8c3a0",
+          "#6b8f71"
+        ]
+      },
+
+      "legend": {
+        "orient": "right",
+        "titleColor": "#0b6623",
+        "labelColor": "#064d1a"
+      }
+    }
+  },
+  
+    "config": {
+      "background": "white"
+    }
+  }

@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "width": 700,
+    "height": 450,
+  
+    "title": "Top Players",
+  
+    "data": {
+      "url": "aus_batting.csv"
+    },
+  
+    "layer": [
+  
+      {
+        "mark": {
+          "type": "line",
+          "color": "#0b6623"
+        },
+        "encoding": {
+          "x": { "field": "Runs", "type": "quantitative" },
+          "y": { "field": "Player", "type": "nominal", "sort": "-x" }
+        }
+      },
+  
+      {
+        "mark": {
+          "type": "circle",
+          "size": 120,
+          "color": "#f4c542"
+        },
+        "encoding": {
+          "x": { "field": "Runs", "type": "quantitative" },
+          "y": { "field": "Player", "type": "nominal", "sort": "-x" }
+        }
+      }
+    ],
+  
+    "config": {
+      "background": "white"
+    }
+  }

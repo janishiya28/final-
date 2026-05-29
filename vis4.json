@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 700,
+  "height": 450,
+
+  "title": "Runs vs Batting Average",
+
+  "data": {
+    "url": "aus_batting.csv"
+  },
+
+  "mark": {
+    "type": "circle",
+    "opacity": 0.75,
+    "stroke": "#064d1a",
+    "strokeWidth": 1
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "Average",
+      "type": "quantitative"
+    },
+
+    "y": {
+      "field": "Runs",
+      "type": "quantitative"
+    },
+
+    "size": {
+      "field": "Runs",
+      "type": "quantitative"
+    },
+
+    "color": {
+      "field": "Runs",
+      "type": "quantitative",
+
+      "scale": {
+        "range": [
+          "#ffd966",
+          "#f4c542",
+          "#0b6623"
+        ]
+      }
+    }
+  },
+
+  "config": {
+    "background": "#ffffff"
+  }
+}

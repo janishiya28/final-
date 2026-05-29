@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 700,
+  "height": 400,
+
+  "title": "Top Australian Run Scorers",
+
+  "data": {
+    "url": "aus_batting.csv"
+  },
+
+  "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 4,
+    "cornerRadiusTopRight": 4,
+    "stroke": "#064d1a",
+    "strokeWidth": 1
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "Player",
+      "type": "nominal",
+      "sort": "-y"
+    },
+
+    "y": {
+      "field": "Runs",
+      "type": "quantitative"
+    },
+
+    "color": {
+      "field": "Runs",
+      "type": "quantitative",
+
+      "scale": {
+        "range": [
+          "#ffd966",
+          "#f4c542",
+          "#0b6623"
+        ]
+      },
+
+      "legend": null
+    }
+  },
+
+  "config": {
+    "background": "#ffffff"
+  }
+}

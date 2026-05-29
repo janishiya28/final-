@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 700,
+  "height": 450,
+
+  "title": "Player Performance",
+
+  "data": {
+    "url": "aus_batting.csv"
+  },
+
+  "mark": {
+    "type": "circle",
+    "opacity": 0.7,
+    "stroke": "#064d1a",
+    "strokeWidth": 1
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "Runs",
+      "type": "quantitative"
+    },
+
+    "y": {
+      "field": "Average",
+      "type": "quantitative"
+    },
+
+    "size": {
+      "field": "Runs",
+      "type": "quantitative"
+    },
+
+    "color": {
+      "field": "Average",
+      "type": "quantitative",
+
+      "scale": {
+        "range": [
+          "#ffd966",
+          "#f4c542",
+          "#0b6623"
+        ]
+      }
+    }
+  },
+
+  "config": {
+    "background": "#ffffff"
+  }
+}

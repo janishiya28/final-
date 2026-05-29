@@ -1,0 +1,37 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "width": 700,
+    "height": 450,
+  
+    "title": "Cumulative Wins Over Time",
+  
+    "data": {
+      "url": "aus_team_results.csv"
+    },
+  
+    "mark": "area",
+  
+    "encoding": {
+  
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+  
+      "y": {
+        "field": "Wins",
+        "type": "quantitative",
+        "title": "Wins"
+      },
+  
+      "color": {
+        "value": "#0b6623"
+      }
+    },
+  
+    "config": {
+      "background": "white"
+    }
+  }

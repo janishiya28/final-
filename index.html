@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Evolution of Australian Cricket</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+
+</head>
+
+<body>
+
+
+<header>
+    <p class="label">Australia 1877 Present</p>
+
+    <h1>
+        The Evolution of<br>
+        Australian Cricket
+    </h1>
+
+    <p class="subtitle">
+        A nation's obsession told through data.
+    </p>
+</header>
+
+<div class="intro">
+    <p>
+        Australian cricket didn't just compete, it dominated. For nearly three decades,
+        the green and gold were the most feared side in world cricket. This is the story
+        of how that dominance was built, who carried it, where it happened, and how the
+        game itself changed along the way.
+    </p>
+</div>
+
+<div class="chapter">
+    <span class="chapter-label">Chapter 1</span>
+
+    <h2>The Dominance Era</h2>
+
+    <p class="chapter-intro">
+        Between 1999 and 2007, Australia won 12 Tests in a single year, a record that stood
+        for over a decade. Under Steve Waugh and then Ricky Ponting, they were virtually unbeatable.
+    </p>
+</div>
+
+<div class="section">
+
+    <div class="text">
+
+        <h3>Test Wins Over Time</h3>
+
+        <p>
+            The peak years speak for themselves. A sharp rise through the late 1990s,
+            a plateau of dominance, then the first real dip in 2005 when England reclaimed
+            the Ashes for the first time in 18 years.
+        </p>
+
+        <div class="note">
+            <b>2001 to 2003</b> Peak with 12 Test wins in a single year<br>
+            <b>2005</b> Ashes lost to England after 18 years<br>
+            <b>2013 to 2014</b> Ashes reclaimed 5 0 under Clarke
+        </div>
+
+    </div>
+
+    <div id="vis1"></div>
+
+</div>
+
+<div class="section flip">
+
+    <div id="vis9"></div>
+
+    <div class="text">
+
+        <h3>Wins as a Trend</h3>
+
+        <p>
+            The area chart shows the overall shape of Australia's Test dominance.
+            The rise, decline, and recovery periods become visually clear across eras.
+        </p>
+
+        <div class="note">
+            <b>Late 1990s</b> Rapid rise toward dominance<br>
+            <b>2008 to 2013</b> Lean period after retirements<br>
+            <b>2022 to 2023</b> Modern resurgence under Smith and Head
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section">
+
+    <div class="text">
+
+        <h3>How the Game Changed</h3>
+
+        <p>
+            Cricket is no longer only a five day game. T20 cricket transformed schedules,
+            strategies, and global audiences. Australia adapted across all formats.
+        </p>
+
+        <div class="note">
+            <b>2015 onwards</b> Rapid growth of T20 fixtures<br>
+            <b>2020</b> COVID affected the cricket calendar<br>
+            <b>2022 to 2023</b> Highest total match count recorded
+        </div>
+
+    </div>
+
+    <div id="vis8"></div>
+
+</div>
+
+<div class="chapter">
+
+    <span class="chapter-label">Chapter 2</span>
+
+    <h2>The Players Who Built It</h2>
+
+    <p class="chapter-intro">
+        Behind every dominant era are the players who shaped it.
+        Australia produced one of the greatest batting generations in cricket history.
+    </p>
+
+</div>
+
+<div class="section flip">
+
+    <div id="vis2"></div>
+
+    <div class="text">
+
+        <h3>Career Runs at a Glance</h3>
+
+        <p>
+            Ponting and Smith stand above the rest, but the depth is equally impressive.
+            Australia consistently produced multiple world class batters at the same time.
+        </p>
+
+        <div class="note">
+            <b>Ponting</b> Australia's all time leading run scorer<br>
+            <b>Smith</b> Still actively chasing the record<br>
+            <b>Warner and Clarke</b> Major contributors across eras
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section">
+
+    <div class="text">
+
+        <h3>The Top Performers</h3>
+
+        <p>
+            The lollipop chart highlights the clear gap between the elite players
+            and the rest of the batting lineup.
+        </p>
+
+        <div class="note">
+            <b>Smith</b> Highest batting average of the modern era<br>
+            <b>Ponting</b> Dominated across all conditions<br>
+            <b>Gilchrist</b> Revolutionised wicketkeeper batting
+        </div>
+
+    </div>
+
+    <div id="vis10"></div>
+
+</div>
+
+<div class="section flip">
+
+    <div id="vis4"></div>
+
+    <div class="text">
+
+        <h3>Volume vs Consistency</h3>
+
+        <p>
+            Scoring heavily and consistently is extremely rare.
+            Only a handful of players manage high averages and massive run totals together.
+        </p>
+
+        <div class="note">
+            <b>Upper right zone</b> Highest quality batters<br>
+            <b>Smith and Ponting</b> Rare combination of consistency and longevity
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section">
+
+    <div class="text">
+
+        <h3>Player Performance Overview</h3>
+
+        <p>
+            This bubble chart compares batting averages and career runs,
+            showing how concentrated Australian batting talent became during the 2000s.
+        </p>
+
+    </div>
+
+    <div id="vis5"></div>
+
+</div>
+
+<div class="section flip">
+
+    <div id="vis11"></div>
+
+    <div class="text">
+
+        <h3>Win Lose or Draw</h3>
+
+        <p>
+            Australia wins more matches than it loses across all formats.
+            The win percentage reflects decades of sustained excellence.
+        </p>
+
+        <div class="note">
+            <b>More than 50 percent</b> Overall win rate<br>
+            <b>Draws</b> Important part of Test cricket history
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section">
+
+    <div class="text">
+
+        <h3>Player Contribution</h3>
+
+        <p>
+            The treemap gives a proportional view of overall run contribution,
+            clearly showing which players carried Australian batting across eras.
+        </p>
+
+        <div class="note">
+            <b>Larger blocks</b> Higher total career runs<br>
+            <b>Colour intensity</b> Relative scoring impact
+        </div>
+
+    </div>
+
+    <div id="vis12"></div>
+
+</div>
+
+<div class="chapter">
+
+    <span class="chapter-label">Chapter 3</span>
+
+    <h2>The Grounds</h2>
+
+    <p class="chapter-intro">
+        Cricket in Australia is deeply connected to place and tradition.
+    </p>
+
+</div>
+
+<div class="section-maps">
+
+    <h3>Where Cricket Lives</h3>
+
+    <p>
+        Most international cricket is concentrated around the east coast and Perth.
+        Historic grounds remain central to Australia's cricket culture.
+    </p>
+
+    <div class="note" style="margin-bottom: 24px;">
+        <b>MCG</b> Home of the Boxing Day Test<br>
+        <b>SCG</b> Traditional New Year Test venue<br>
+        <b>NSW</b> Hosts the highest number of matches
+    </div>
+
+    <div class="maps-row">
+
+        <div>
+            <p class="map-label">Major Cricket Grounds</p>
+            <div id="vis3"></div>
+        </div>
+
+        <div>
+            <p class="map-label">Matches by State</p>
+            <div id="vis6"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="chapter">
+
+    <span class="chapter-label">Chapter 4</span>
+
+    <h2>Patterns Beneath the Surface</h2>
+
+    <p class="chapter-intro">
+        The final visualisations reveal the hidden structures behind Australia's success.
+    </p>
+
+</div>
+
+<div class="section flip">
+
+    <div id="vis7"></div>
+
+    <div class="text">
+
+        <h3>Where Players Cluster</h3>
+
+        <p>
+            Most elite Australian batters fall into a similar performance range,
+            while only a few legends occupy the extreme upper corner.
+        </p>
+
+        <div class="note">
+            <b>Dense zone</b> Average between 45 and 55 with high run totals<br>
+            <b>Sparse upper corner</b> Reserved for historically rare players
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>
+        Janihsiya Avelin Walter |
+        FIT2179 Data Visualisation
+    </p>
+</footer>
+
+<script>
+    vegaEmbed('#vis1', 'vis1.json');
+    vegaEmbed('#vis2', 'vis2.json');
+    vegaEmbed('#vis3', 'vis3.json');
+    vegaEmbed('#vis4', 'vis4.json');
+    vegaEmbed('#vis5', 'vis5.json');
+    vegaEmbed('#vis6', 'vis6.json');
+    vegaEmbed('#vis7', 'vis7.json');
+    vegaEmbed('#vis8', 'vis8.json');
+    vegaEmbed('#vis9', 'vis9.json');
+    vegaEmbed('#vis10', 'vis10.json');
+    vegaEmbed('#vis11', 'vis11.json');
+    vegaEmbed('#vis12', 'vis12.json');
+</script>
+
+
+</body>
+</html>

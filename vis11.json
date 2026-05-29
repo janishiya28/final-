@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 500,
+  "height": 450,
+
+  "title": "Match Outcome Distribution",
+
+  "data": {
+    "url": "aus_results_distribution.csv"
+  },
+
+  "mark": {
+    "type": "arc",
+    "innerRadius": 90,
+    "outerRadius": 170,
+    "stroke": "white",
+    "strokeWidth": 3
+  },
+
+  "encoding": {
+
+    "theta": {
+      "field": "Count",
+      "type": "quantitative"
+    },
+
+    "color": {
+      "field": "Result",
+      "type": "nominal",
+
+      "scale": {
+        "range": [
+          "#d4b000",
+          "#a8c3a0",
+          "#6b8f71",
+          "#0b6623"
+        ]
+      },
+
+      "legend": {
+        "title": "Match Result",
+        "titleColor": "#0b6623",
+        "labelColor": "#064d1a"
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Result",
+        "title": "Result"
+      },
+
+      {
+        "field": "Count",
+        "title": "Matches"
+      }
+    ]
+  },
+
+  "view": {
+    "stroke": null
+  },
+
+  "config": {
+
+    "background": "#ffffff",
+
+    "title": {
+      "color": "#0b6623",
+      "fontSize": 20,
+      "font": "Georgia"
+    }
+  }
+}
